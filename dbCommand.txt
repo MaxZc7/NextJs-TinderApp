@@ -1,0 +1,22 @@
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS votes;
+
+CREATE TABLE users(
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ username VARCHAR(60) ,
+ email VARCHAR(60) ,
+ password VARCHAR(100)
+
+);
+
+CREATE TABLE votes(
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ vote_id INT,
+ user_id INT,
+ FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+
+CREATE TRIGGER 
+
+INSERT INTO users (username, email) VALUES ("Primer Usuario", "PrimerEmail@hotmail.com");
