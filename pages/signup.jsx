@@ -26,8 +26,8 @@ function Login() {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen w-full">
-      <div className="bg-[#707070] rounded-xl p-20">
+    <div className="flex justify-center items-center h-screen w-full ">
+      <div className="bg-[#111418] rounded-xl p-20">
         <form
           className="flex flex-col m-4  justify-items-center gap-4 text-black "
           onSubmit={(e) => handleSubmit(e)}
@@ -36,21 +36,21 @@ function Login() {
           <input
             type="email"
             placeholder="Email"
-            className="p-2 rounded-xl"
+            className="p-2 rounded-xl  placeholder:text-center"
             onChange={(e) => setEmail(e.target.value)}
             required
           />
           <input
             type="text"
             placeholder="Username"
-            className="p-2 rounded-xl"
+            className="p-2 rounded-xl  placeholder:text-center"
             onChange={(e) => setUsername(e.target.value)}
             required
           />
           <input
             type="password"
             placeholder="Password"
-            className="p-2 rounded-xl"
+            className="p-2 rounded-xl  placeholder:text-center"
             onChange={(e) => setPassword(e.target.value)}
             required
           />
@@ -63,7 +63,7 @@ function Login() {
         <div className="flex justify-center items-center text-red-600 font-medium text-xl     rounded-2xl p-1">
           {errorMessage ? errorMessage : ''}
         </div>
-        <div className="flex justify-center items-center hover:text-blue-300 rounded-2xl text-xl  p-1">
+        <div className="flex justify-center items-center hover:text-blue-300 rounded-2xl text-xl text-white p-1">
           <a href="login">Already Have an account?</a>
         </div>
       </div>

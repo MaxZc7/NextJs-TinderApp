@@ -3,6 +3,8 @@ import db from '../../db/database';
 export default async function user(req, res) {
   const MyToken = req.cookies.MyToken;
 
+  const isToken = MyToken ?? false;
+
   if (MyToken) {
     const { username } = verify(
       MyToken,
@@ -12,7 +14,11 @@ export default async function user(req, res) {
       sql: 'SELECT image FROM users WHERE username = (?)',
       args: [username],
     });
-    return res.json({ username: username, avatar: avatar.rows[0].image });
+    return res.json({
+      username: username,
+      avatar: avatar.rows[0].image ?? '/defaultProfile.jpg',
+      isToken: isToken,
+    });
   }
-  return res.status(401).json({ error: 'Invalid token' });
+  return res.json({ error: 'Invalid token' });
 }

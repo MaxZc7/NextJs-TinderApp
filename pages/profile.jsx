@@ -58,25 +58,25 @@ export default function Profile() {
     return;
   };
   return (
-    <div className="flex flex-col justify-center items-center h-screen w-full gap-8 bg-slate-800 rounded-xl">
-      <div className="flex justify-center items-center gap-4 mx-auto">
-        <h1 className="text-3xl min-w-[200px]">Profile: {username}</h1>
-        <div className="w-[100px]">
-          {profile ? (
-            <Image
-              width={60}
-              height={60}
-              src={profile}
-              alt=""
-              className="rounded-full"
-            />
-          ) : (
-            ''
-          )}
-        </div>
-      </div>
+    <div className="flex flex-col justify-center items-center h-screen w-full gap-8 bg-black rounded-xl text-white">
       <div className="flex flex-col text-2xl gap-4">
-        <div className="bg-slate-950 px-8 py-4 rounded-xl flex justify-center items-center flex-col gap-6">
+        <div className="flex justify-center items-center gap-4 mx-auto bg-[#111418] w-full  py-2 rounded-full">
+          <h1 className="text-3xl min-w-[200px]">Profile: {username}</h1>
+          <div className="w-[100px]">
+            {profile ? (
+              <Image
+                width={60}
+                height={60}
+                src={profile}
+                alt=""
+                className="rounded-full"
+              />
+            ) : (
+              ''
+            )}
+          </div>
+        </div>
+        <div className="bg-[#111418] px-8 py-4 rounded-xl flex justify-center items-center flex-col gap-6">
           <h4 className="text-center border-b pb-1">Set your profile image</h4>
           <div className="flex justify-center items-center gap-6">
             <picture>
@@ -102,12 +102,12 @@ export default function Profile() {
 
         <Link
           href="/"
-          className="bg-slate-950 rounded-full px-4 py-2 hover:scale-105 transition-all text-center"
+          className="bg-[#111418] rounded-full px-4 py-2 hover:scale-105 transition-all text-center"
         >
           Go Home
         </Link>
         <button
-          className="bg-slate-950 rounded-full px-4 py-2 hover:scale-105 transition-all"
+          className="bg-[#111418] rounded-full px-4 py-2 hover:scale-105 transition-all"
           onClick={() => handleLogout()}
         >
           Logout

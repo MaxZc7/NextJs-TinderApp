@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
 export default function Header() {
-  const [username, setUsername] = useState('');
+  const [username, setUsername] = useState('/defaultProfile.jpg');
   const [avatarImage, setAvatarImage] = useState('/defaultProfile.jpg');
 
   useEffect(() => {
@@ -18,24 +18,54 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="flex justify-between px-10 w-full p-6">
-      <div>{/* image Here */}</div>
+    <div className="flex justify-between px-10 w-full   text-white absolute bg-gradient-to-b  from-black  to-transparent">
+      <div className="min-w-[250px]">
+        <a
+          href="/
+      "
+        >
+          <img src="/logoTinder.webp" alt="logo" />
+        </a>
+      </div>
 
       <nav className="flex gap-6">
-        <ul className="flex justify-center items-center gap-4">
+        <ul className="flex justify-center items-center gap-8  text-2xl  ">
           <li>
-            <Link href="/">Home</Link>
+            <Link
+              href="/mymatchs"
+              className="hover:text-red-500 hover:border-b border-red-500"
+            >
+              My Matchs
+            </Link>
           </li>
           <li>
-            <Link href="/about">about</Link>
+            <Link
+              href="/informacion"
+              className="hover:text-red-500 hover:border-b border-red-500"
+            >
+              Informacion
+            </Link>
           </li>
           <li>
-            <Link href="/profile">Profile</Link>
+            <Link
+              href="/match"
+              className="hover:text-red-500 hover:border-b border-red-500"
+            >
+              Match
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/profile"
+              className="hover:text-red-500 hover:border-b border-red-500"
+            >
+              Profile
+            </Link>
           </li>
         </ul>
       </nav>
 
-      <div>
+      <div className="my-auto min-w-[250px]">
         {username ? (
           <div className="flex justify-center items-center gap-4">
             <Image
@@ -50,7 +80,7 @@ export default function Header() {
             </div>
           </div>
         ) : (
-          <div>
+          <div className="flex  gap-2">
             {' '}
             <Link
               href="/login"

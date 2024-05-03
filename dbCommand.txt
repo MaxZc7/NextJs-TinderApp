@@ -5,14 +5,18 @@ CREATE TABLE users(
  id INTEGER PRIMARY KEY AUTOINCREMENT,
  username VARCHAR(60) ,
  email VARCHAR(60) ,
+ image VARCHAR(60),
  password VARCHAR(100)
 
 );
+
+DROP TABLE IF EXISTS votes;
 
 CREATE TABLE votes(
  id INTEGER PRIMARY KEY AUTOINCREMENT,
  vote_id INT,
  user_id INT,
+ vote INT,
  FOREIGN KEY (user_id) REFERENCES users(id)
 );
 

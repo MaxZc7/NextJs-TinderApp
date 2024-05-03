@@ -14,12 +14,12 @@ export async function middleware(request: NextRequest) {
     );
     return NextResponse.next();
   } catch (err) {
-    console.log(err);
+    console.error(err);
 
     return NextResponse.redirect(new URL('/login', request.url));
   }
 }
 
 export const config = {
-  matcher: ['/profile', '/'],
+  matcher: ['/profile', '/match'],
 };

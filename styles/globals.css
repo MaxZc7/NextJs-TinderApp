@@ -2,10 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'PatriciaGothic', 'sans-serif';
+  src: url('/fonts/myfont.woff2') format('woff2');
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+}
+
+.buttonGradient {
+  background: linear-gradient(to top right, #fd267a, #ff6036);
+  border: none;
+  color: white;
+  padding: 11px 22px;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 2px;
+}
+.buttonGradient:hover {
+  background: linear-gradient(to top right, #fd2d71, #fd725c);
+}
+
+.arrowGradient {
+  background: linear-gradient(to top right, #fd267a, #ff6036);
+  color: white;
+}
+.bgGradient {
+  background: linear-gradient(to bottom, #fd267a, #ff6036);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,14 +42,12 @@
   }
 }
 
+.backgroundImage {
+  background-image: url('../public/bg-image.webp');
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'PatriciaGothic', sans-serif;
 }
 
 @layer utilities {

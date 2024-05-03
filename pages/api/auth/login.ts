@@ -5,6 +5,10 @@ import cookie from 'cookie';
 export default async function login(req: any, res: any) {
   const { username, password } = req.body;
 
+  const id = await client.execute({
+    sql: 'SELECT id FROM users WHERE username = ?',
+    args: [username],
+  });
   const existingUser = await client.execute({
     sql: 'SELECT * FROM users WHERE username = ?',
     args: [username],
@@ -23,6 +27,7 @@ export default async function login(req: any, res: any) {
       {
         exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 30,
         username: username,
+        id: id.rows[0].id,
       },
       'ASODFNASIOPFNIOASNFIOASN123134ASNIOF'
     );
