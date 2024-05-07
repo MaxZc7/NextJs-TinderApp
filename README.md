@@ -9,8 +9,12 @@ Posibilidades:
 -Logearte desde la misma
 
 -Ver los perfiles de las demas personas en un orden aleatorio y no se puede repetor
+
 -Like o Dislike a los usuarios
+
 -Posibilidad de hacer match con otros usuarios
+
 -Ver tus "Votos" o "Candidatos" en la seccion de MyMatchs
+
 -Foto de perfil a eleccion
 
