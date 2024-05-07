@@ -5,7 +5,9 @@ NextJs App - tinder clone
 Posibilidades:
 
 -Registrarte en la base de datos
+
 -Logearte desde la misma
+
 -Ver los perfiles de las demas personas en un orden aleatorio y no se puede repetor
 -Like o Dislike a los usuarios
 -Posibilidad de hacer match con otros usuarios
