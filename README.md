@@ -8,7 +8,7 @@ Posibilidades:
 
 -Logearte desde la misma
 
--Ver los perfiles de las demas personas en un orden aleatorio y no se puede repetor
+-Ver los perfiles de las demas personas en un orden aleatorio y no se pueden repetir usuarios
 
 -Like o Dislike a los usuarios
 
