@@ -34,7 +34,6 @@ export default async function match(req, res) {
         if (existingVote.rows.length === 0) {
           candidateFound = true;
         } else {
-          // remueve al usuario ya listado de la lista de ids
           idsNum.splice(randomIndex, 1);
         }
       } else {

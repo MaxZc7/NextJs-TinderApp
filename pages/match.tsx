@@ -10,6 +10,9 @@ export default function Match() {
   const [finishVotes, setFinishVotes] = useState(false);
 
   const [isLoading, setIsLoading] = useState(true);
+
+  const [variableClass, setVariableClass] = useState('');
+
   const isMounted = useRef(false);
 
   useEffect(() => {
@@ -37,6 +40,7 @@ export default function Match() {
 
   const handleLeft = async () => {
     try {
+      setVariableClass(' -translate-x-40 opacity-0');
       const response = await axios.post('/api/rejection', { matchId });
 
       if (response.status === 200) {
@@ -49,9 +53,12 @@ export default function Match() {
     } catch (e) {
       console.error(`Error fetching Data ${e}`);
     }
+    setVariableClass(' ');
   };
   const handleRight = async () => {
     try {
+      setVariableClass(' translate-x-40 opacity-0');
+
       const response = await axios.post('/api/like', { matchId });
 
       if (response.status === 200) {
@@ -64,6 +71,7 @@ export default function Match() {
     } catch (e) {
       console.error(`Error fetching Data ${e}`);
     }
+    setVariableClass(' ');
   };
 
   return (
@@ -71,7 +79,7 @@ export default function Match() {
       {/* Loader */}
 
       <div
-        className={`absolute w-screen h-screen bgGradient z-10 transition-all ${
+        className={`  absolute w-screen h-screen bgGradient z-10 transition-all ${
           isLoading ? 'opacity-100' : 'opacity-0 hidden'
         }`}
       >
@@ -94,12 +102,16 @@ export default function Match() {
       </div>
       {/* loader */}
       <Header />
-      <div className="h-screen w-full flex flex-col justify-center items-center gap-4">
+      <div className="h-screen w-full flex flex-col justify-center items-center gap-4 pt-20">
         <h2 className="text-3xl text-white">
           <strong>{matchUsername}</strong>
         </h2>
         <picture>
-          <img src={matchImage} alt="MatchImage" className="rounded-xl" />
+          <img
+            src={matchImage}
+            alt="MatchImage"
+            className={`rounded-xl relative ${variableClass} transition-all duration-700`}
+          />
         </picture>
         <div className="flex gap-6">
           {finishVotes ? (

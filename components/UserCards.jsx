@@ -1,19 +1,19 @@
 function UserCards({ likedUsersData, matchUsersData, noLikedUsersData }) {
   return (
-    <section className="border border-white flex flex-col p-4">
+    <section className="  flex flex-col mt-4 ">
       <div>
         {likedUsersData == undefined
           ? ''
           : likedUsersData?.map(({ username, image, id }) => (
               <div
                 key={id}
-                className="flex flex-col justify-center items-center gap-6"
+                className="flex flex-col justify-center items-center gap-6  rounded-2xl border mb-4"
               >
                 {' '}
-                <span className="text-xl font-medium border-b">{username}</span>
+                <span className="text-3xl font-medium pt-6">{username}</span>
                 <picture>
                   <img
-                    className="rounded-xl p-2 my-1 w-[350px]"
+                    className="rounded-2xl p-2 pb-8 my-1 w-[350px]"
                     src={image ? image : '/defaultProfile.jpg'}
                     alt="imageOfUser"
                   />
@@ -27,13 +27,13 @@ function UserCards({ likedUsersData, matchUsersData, noLikedUsersData }) {
           : matchUsersData?.map(({ username, image, id }) => (
               <div
                 key={id}
-                className="flex flex-col justify-center items-center gap-6"
+                className="flex flex-col justify-center items-center gap-6  rounded-2xl border mb-4"
               >
                 {' '}
-                <span className="text-xl font-medium border-b">{username}</span>
+                <span className="text-3xl font-medium pt-6">{username}</span>
                 <picture>
                   <img
-                    className="rounded-xl p-2 my-1 w-[350px]"
+                    className="rounded-2xl p-2 pb-8 my-1 w-[350px]"
                     src={image ? image : '/defaultProfile.jpg'}
                     alt="imageOfUser"
                   />
@@ -47,13 +47,13 @@ function UserCards({ likedUsersData, matchUsersData, noLikedUsersData }) {
           : noLikedUsersData?.map(({ username, image, id }) => (
               <div
                 key={id}
-                className="flex flex-col justify-center items-center gap-6"
+                className="flex flex-col justify-center items-center gap-6  rounded-2xl border mb-4"
               >
-                <span className="text-xl font-medium border-b">{username}</span>
-
+                {' '}
+                <span className="text-3xl font-medium pt-6">{username}</span>
                 <picture>
                   <img
-                    className="rounded-xl p-2 my-1 w-[350px]"
+                    className="rounded-2xl p-2 pb-8 my-1 w-[350px]"
                     src={image ? image : '/defaultProfile.jpg'}
                     alt="imageOfUser"
                   />
