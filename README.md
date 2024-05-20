@@ -6,7 +6,7 @@ Posibilidades:
 
 -Registrarte en la base de datos
 
--Logearte desde la misma
+-Loguearte desde la misma
 
 -Ver los perfiles de las demas personas en un orden aleatorio y no se pueden repetir usuarios
 
@@ -18,4 +18,4 @@ Posibilidades:
 
 -Foto de perfil a eleccion
 
-Rutas protegida: Para ver matchs necesitas loguearte al igual que, perfil y tus matchs
+Rutas protegida: Para ver matchs necesitas loguearte al igual que, tu perfil y tus matchs
