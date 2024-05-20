@@ -18,3 +18,4 @@ Posibilidades:
 
 -Foto de perfil a eleccion
 
+Rutas protegida: Para ver matchs necesitas loguearte al igual que, perfil y tus matchs
