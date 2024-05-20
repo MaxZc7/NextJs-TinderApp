@@ -20,4 +20,4 @@ Posibilidades:
 
 Rutas protegida: Para ver matchs necesitas loguearte al igual que, tu perfil y tus matchs
 
-Plus: Manejo de usuarios con JWT almacenado en las cookies
+Plus: Manejo de usuarios con JWT almacenado en una cookie
